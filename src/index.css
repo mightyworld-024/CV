@@ -1,0 +1,196 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700&display=swap");
+
+@import "tailwindcss";
+
+:root {
+  font-family: "Inter", sans-serif;
+  color: #ffffff;
+  background: #050505;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+html {
+  scroll-behavior: auto;
+  background: #050505;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: #050505;
+  color: #ffffff;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+::selection {
+  background: #ffffff;
+  color: #000000;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333333;
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555555;
+}
+
+.mono {
+  font-family: "DM Mono", monospace;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.tech-grid {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+
+.noise {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9990;
+  opacity: 0.025;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.7'/%3E%3C/svg%3E");
+}
+
+.glow {
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.05),
+    0 0 40px rgba(255, 255, 255, 0.04);
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+   -webkit-backdrop-filter: blur(18px);
+   backdrop-filter: blur(18px);
+ 
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+:root {
+  --cyan: #00f5ff;
+  --violet: #7c3aed;
+  --magenta: #ff2bd6;
+  --blue: #2563eb;
+
+  --bg: #030305;
+  --surface: rgba(255, 255, 255, 0.035);
+  --border: rgba(255, 255, 255, 0.1);
+}
+.rgb-background {
+  background:
+    radial-gradient(
+      circle at 20% 20%,
+      rgba(0, 245, 255, 0.08),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 80% 30%,
+      rgba(124, 58, 237, 0.1),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 50% 90%,
+      rgba(255, 43, 214, 0.07),
+      transparent 30%
+    ),
+    #030305;
+}
+@keyframes rgbGlow {
+  0% {
+    transform: translate3d(-10%, -5%, 0) scale(1);
+    opacity: 0.35;
+  }
+
+  50% {
+    transform: translate3d(10%, 5%, 0) scale(1.1);
+    opacity: 0.55;
+  }
+
+  100% {
+    transform: translate3d(-10%, -5%, 0) scale(1);
+    opacity: 0.35;
+  }
+}
+
+.rgb-glow {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  border-radius: 9999px;
+  background: linear-gradient(
+    135deg,
+    var(--cyan),
+    var(--violet),
+    var(--magenta)
+  );
+  filter: blur(140px);
+  opacity: 0.25;
+  animation: rgbGlow 12s ease-in-out infinite;
+  pointer-events: none;
+}
+.section-left {
+  width: 100%;
+  max-width: 1100px;
+  margin-left: 5%;
+  margin-right: auto;
+}
+
+.section-right {
+  width: 100%;
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: 5%;
+}
+
+@media (max-width: 768px) {
+  .section-left,
+  .section-right {
+    width: auto;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}@media (pointer: fine) {
+  body {
+    cursor: none;
+  }
+
+  a,
+  button,
+  input,
+  textarea,
+  select {
+    cursor: none;
+  }
+}
