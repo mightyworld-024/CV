@@ -113,7 +113,7 @@ const About = () => {
                 whileHover={{ x: 8 }}
                 className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/0.03 p-6 backdrop-blur-xl transition-all duration-300 hover:border-cyan-400/20"
               >
-                <div className="absolute inset-0 bg-gradient-to-r from-cyan-400/0 via-violet-400/0 to-fuchsia-400/0 transition-all duration-500 group-hover:from-cyan-400/5 group-hover:via-violet-400/5 group-hover:to-fuchsia-400/5" />
+                <div className="absolute inset-0 bg-linear-to-r from-cyan-400/0 via-violet-400/0 to-fuchsia-400/0 transition-all duration-500 group-hover:from-cyan-400/5 group-hover:via-violet-400/5 group-hover:to-fuchsia-400/5" />
 
                 <div className="relative flex items-center justify-between">
                   <div>

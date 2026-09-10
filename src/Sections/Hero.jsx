@@ -1,5 +1,10 @@
 import { useEffect } from "react";
-import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
+import {
+  motion,
+  useMotionValue,
+  useSpring,
+  useTransform,
+} from "framer-motion";
 import { ArrowDownRight, ArrowUpRight } from "lucide-react";
 
 const Hero = () => {
@@ -114,11 +119,13 @@ const Hero = () => {
 
       <div className="relative mx-auto max-w-7xl">
         <div className="grid items-center gap-16 lg:grid-cols-[1.05fr_0.95fr]">
+
           {/* ===================================================== */}
           {/* LEFT */}
           {/* ===================================================== */}
 
           <div>
+
             {/* Status */}
 
             <motion.div
@@ -185,7 +192,7 @@ const Hero = () => {
               }}
               className="text-6xl font-bold leading-[0.86] tracking-[-0.065em] text-white sm:text-7xl md:text-8xl lg:text-[92px] xl:text-[105px]"
             >
-              Sidharth 
+              Sidharth
               <br />
 
               <span className="bg-gradient-to-r from-cyan-300 via-violet-400 to-fuchsia-400 bg-clip-text text-transparent">
@@ -232,6 +239,8 @@ const Hero = () => {
               }}
               className="mt-10 flex flex-wrap items-center gap-4"
             >
+              {/* View My Work */}
+
               <a
                 href="#projects"
                 className="group relative inline-flex items-center gap-3 overflow-hidden rounded-full bg-white px-6 py-3.5 text-sm font-medium text-black transition-all duration-500 hover:bg-cyan-300"
@@ -246,11 +255,28 @@ const Hero = () => {
                 <span className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/40 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
               </a>
 
+              {/* Let's Talk */}
+
               <a
                 href="#contact"
                 className="group inline-flex items-center gap-3 rounded-full border border-white/10 bg-white/0.03 px-6 py-3.5 text-sm text-gray-400 backdrop-blur-xl transition-all duration-300 hover:border-violet-400/30 hover:bg-violet-400/0.05 hover:text-white"
               >
                 Let's Talk
+
+                <ArrowDownRight
+                  size={16}
+                  className="transition-transform duration-300 group-hover:translate-y-1 group-hover:translate-x-1"
+                />
+              </a>
+
+              {/* Download CV */}
+
+              <a
+                href="/Sidharth_Mitra_Resume_2026.pdf"
+                download
+                className="group inline-flex items-center gap-3 rounded-full border border-cyan-400/20 bg-cyan-400/5 px-6 py-3.5 text-sm text-cyan-300 backdrop-blur-xl transition-all duration-300 hover:border-cyan-400/40 hover:bg-cyan-400/10 hover:text-white"
+              >
+                Download CV
 
                 <ArrowDownRight
                   size={16}
